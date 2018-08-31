@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  pieChartData = [
+    {
+      label: 'Liverpool FC',
+      value: 5,
+      color: 'red',
+    },
+    {
+      label: 'Real Madrid	',
+      value: 13,
+      color: 'black',
+    },
+    {
+      label: 'FC Bayern München',
+      value: 5,
+      color: 'blue',
+    },
+  ];
 }

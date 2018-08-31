@@ -1,3 +1,44 @@
-<p>
-  ngx-piechart works!
-</p>
+<div
+  class="c-piechart"
+  [ngStyle]="{'width': width}">
+  <svg
+    [ngStyle]="{'width': width, 'height': height}"
+    xmlns="http://www.w3.org/2000/svg">
+    <!-- <path [attr.d]="pathD" stroke="black" fill="transparent" stroke-width="8" fill-opacity="0.5"/> -->
+    <path
+      *ngFor="let arc of arcs"
+      [attr.d]="arc.d"
+      [attr.stroke]="arc.color"
+      fill="transparent"
+      stroke-width="8"
+      fill-opacity="0.5"/>
+  </svg>
+
+  <div
+    class="c-piechart__text"
+    [ngStyle]="{'width': width, 'height': height}">
+    <div [innerText]="total"></div>
+    <div>UEFA Champions League</div>
+  </div>
+
+  <div class="c-piechart__legends">
+    <div
+      class="c-piechart__legend"
+      *ngFor="let item of data">
+      <div
+        class="c-piechart__legend-bar"
+        [ngStyle]="{'background-color': item.color}">
+      </div>
+
+      <div
+        class="c-piechart__legend-title"
+        [innerText]="item.label">
+      </div>
+
+      <div
+        class="c-piechart__legend-percentage"
+        [innerText]="item.percentage">
+      </div>
+    </div>
+  </div>
+</div>

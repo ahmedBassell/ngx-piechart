@@ -1,0 +1,41 @@
+.c-piechart {
+  position: relative;
+
+  .c-piechart__text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .c-piechart__legends {
+    display: flex;
+    justify-content: center;
+  }
+    .c-piechart__legend {
+      // width: 64px;
+      margin: 16px;
+      display: flex;
+      align-items: center;
+      flex-flow: column;
+    }
+      .c-piechart__legend-bar {
+        width: 40px;
+        height: 8px;
+        border-radius: 4px;
+        background-color: crimson;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .c-piechart__legend-title {
+        text-align: center;
+      }
+      .c-piechart__legend-percentage {
+        text-align: center;
+
+      }
+}
