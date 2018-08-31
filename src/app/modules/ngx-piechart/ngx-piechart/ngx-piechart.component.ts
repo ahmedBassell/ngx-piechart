@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-ngx-piechart',
+  selector: 'ngx-piechart',
   templateUrl: './ngx-piechart.component.html',
   styleUrls: ['./ngx-piechart.component.scss']
 })
